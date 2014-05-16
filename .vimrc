@@ -21,7 +21,6 @@ Bundle "garbas/vim-snipmate"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
 
-
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -44,6 +43,7 @@ map <F4> :NERDTreeFind<CR>
 
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set mouse=a
 set number
 set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
@@ -104,14 +104,10 @@ set modelines=3
 " Turn folding off for real, hopefully
 set foldmethod=manual
 set nofoldenable
-
-let g:syntastic_html_tidy_ignore_errors=[
-      \" proprietary attribute \"ng-",
-      \"<input> proprietary attribute \"required",
-      \"<input> proprietary attribute \"autofocus",
-      \"trimming empty <",
-      \"<form> lacks"
-      \]
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_mode_map={ 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['html'] }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -153,6 +149,7 @@ map <leader>y "*y
 nnoremap <leader>vb :grep! "\b<c-r><c-w>\b"<cr>:cw<cr><cr>
 nnoremap <leader>vv :grep! -Q '<c-r><c-w>'<cr>:cw<cr><cr>
 
+nmap <leader>r :registers<cr>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <leader>vf :Ag<SPACE>
 

@@ -50,7 +50,7 @@ export PATH=/Users/mario/tools/gradle-1.4/bin:$PATH
 
 export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/4.0.0.203"
 
-alias sblm='open -a "Sublime Text 2"'
+alias sblm='open -a "Sublime Text"'
 export PATH="/usr/local/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -70,6 +70,6 @@ export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/3.1.2.342"
 
 export PATH=/Users/mario/bin/Sencha/Cmd/3.1.2.342:$PATH
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.2.67:$PATH
-
+export ANDROID_HOME=/usr/local/opt/android-sdk
 export ANT_OPTS="-Xms512M -Xmx1024M -XX:MaxPermSize=250M"
 
