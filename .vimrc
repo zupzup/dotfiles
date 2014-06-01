@@ -44,6 +44,7 @@ map <F4> :NERDTreeFind<CR>
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
+set ttymouse=xterm2
 set number
 set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
@@ -80,6 +81,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backspace=indent,eol,start
 " display incomplete commands
 set showcmd
+set list
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 " Enable highlighting for syntax
 syntax on
 
@@ -104,7 +107,7 @@ set modelines=3
 " Turn folding off for real, hopefully
 set foldmethod=manual
 set nofoldenable
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jscs','jshint']
 let g:syntastic_mode_map={ 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['html'] }
@@ -148,6 +151,8 @@ colorscheme nazca
 map <leader>y "*y
 nnoremap <leader>vb :grep! "\b<c-r><c-w>\b"<cr>:cw<cr><cr>
 nnoremap <leader>vv :grep! -Q '<c-r><c-w>'<cr>:cw<cr><cr>
+
+nnoremap <leader>c :nohls<cr>
 
 nmap <leader>r :registers<cr>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
