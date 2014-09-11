@@ -20,6 +20,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
+Bundle "fatih/vim-go"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 

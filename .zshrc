@@ -51,6 +51,7 @@ export PATH=/Users/mario/tools/gradle-1.4/bin:$PATH
 export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/4.0.0.203"
 
 alias sblm='open -a "Sublime Text"'
+alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security'
 export PATH="/usr/local/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -58,7 +59,8 @@ export PATH="/usr/local/bin:$PATH"
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
 # Customize to your needs...
-export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/Users/mario/bin/Sencha/Cmd/4.0.0.203:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export SCALA_HOME=/Users/mario/scala
+export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/Users/mario/bin/Sencha/Cmd/4.0.0.203:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/scala/bin
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 PLATFORM_HOME=/Users/mario/dev/netconomy/mmx/hybris/bin/platform
@@ -72,4 +74,5 @@ export PATH=/Users/mario/bin/Sencha/Cmd/3.1.2.342:$PATH
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.2.67:$PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export ANT_OPTS="-Xms512M -Xmx1024M -XX:MaxPermSize=250M"
-
+export PATH=$PATH:/Users/mario/tools/play-2.0
+export GOPATH=/Users/mario/go
