@@ -21,6 +21,7 @@ Bundle "garbas/vim-snipmate"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
 Bundle "fatih/vim-go"
+Bundle "bling/vim-airline"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -37,6 +38,8 @@ set ft=javascript
 
 let g:tern_map_keys=1
 let g:tern_map_prefix="<leader>"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='wombat'
 
 map <F3> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
@@ -199,19 +202,7 @@ inoremap <s-tab> <c-o>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RENAME CURRENT FILE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <leader>n :call RenameFile()<cr>
+map <leader>n :bn<cr>
 
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gc :CtrlP app/scripts/controllers<cr>
