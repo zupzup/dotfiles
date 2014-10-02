@@ -17,11 +17,11 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
 Bundle "fatih/vim-go"
 Bundle "bling/vim-airline"
+Bundle "Valloric/YouCompleteMe"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -177,9 +177,6 @@ function! OpenSplit()
 endfunction
 " Align selected lines
 vnoremap <leader>ib :!align<cr>
-
-:imap <C-j> <Plug>snipMateNextOrTrigger
-:smap <C-j> <Plug>snipMateNextOrTrigger
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
