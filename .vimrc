@@ -21,6 +21,8 @@ Bundle "milkypostman/vim-togglelist"
 Bundle "fatih/vim-go"
 Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
+Bundle "tpope/vim-fugitive"
+Bundle "airblade/vim-gitgutter"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -202,9 +204,9 @@ map <leader>n :bn<cr>
 
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gc :CtrlP app/scripts/controllers<cr>
-map <leader>gs :CtrlP app/scripts<cr>
-map <leader>ga :CtrlP app<cr>
-map <leader>gb :CtrlP app/styles<cr>
+map <leader>gs :Gstatus<cr>
+map <leader>gb :Gblame<cr>
+map <leader>gl :Glog<cr>
 map <leader>gt :CtrlP ../app-tests<cr>
 map <leader>gu :CtrlP ../<cr>
 map <leader>f :CtrlP<cr>

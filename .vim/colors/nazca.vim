@@ -84,6 +84,7 @@ hi  StatusLine   guifg=#9cffd3 guibg=#202020 gui=NONE      ctermfg=85    ctermbg
 hi  StatusLineNC guifg=#000000 guibg=#202020 gui=bold      ctermfg=0     ctermbg=234  cterm=BOLD
 
 hi  FoldColumn   guifg=#a0a8b0 guibg=#384048 gui=NONE      ctermfg=248   ctermbg=238  cterm=NONE
+hi  SignColumn   guifg=#f6f3e8 guibg=#161617 gui=NONE      ctermfg=7     ctermbg=233  cterm=NONE
 hi  Folded       guifg=#a0a8b0 guibg=#384048 gui=NONE      ctermfg=248   ctermbg=238  cterm=NONE
 hi  Title        guifg=#f6f3e8 guibg=NONE    gui=bold      ctermfg=7     ctermbg=NONE cterm=BOLD
 hi  Visual       guifg=NONE    guibg=#262D51 gui=NONE      ctermfg=NONE  ctermbg=237  cterm=NONE
