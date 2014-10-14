@@ -22,7 +22,6 @@ Bundle "fatih/vim-go"
 Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
-Bundle "airblade/vim-gitgutter"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
