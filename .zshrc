@@ -76,3 +76,6 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 export ANT_OPTS="-Xms512M -Xmx1024M -XX:MaxPermSize=250M"
 export PATH=$PATH:/Users/mario/tools/play-2.0
 export GOPATH=/Users/mario/go
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/mario/.gvm/bin/gvm-init.sh" ]] && source "/Users/mario/.gvm/bin/gvm-init.sh"
