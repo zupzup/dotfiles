@@ -22,6 +22,8 @@ Bundle "fatih/vim-go"
 Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
+Bundle "mxw/vim-jsx"
+Bundle "facebook/vim-flow"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -40,6 +42,8 @@ let g:tern_map_keys=1
 let g:tern_map_prefix="<leader>"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
+let g:flow#enable=0
+let g:jsx_ext_required = 0
 
 map <F3> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
@@ -111,7 +115,7 @@ set modelines=3
 " Turn folding off for real, hopefully
 set foldmethod=manual
 set nofoldenable
-let g:syntastic_javascript_checkers = ['jscs','jshint']
+let g:syntastic_javascript_checkers = ['jscs','jsxhint']
 let g:syntastic_mode_map={ 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['html'] }

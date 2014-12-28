@@ -72,6 +72,7 @@ export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/3.1.2.342"
 
 export PATH=/Users/mario/bin/Sencha/Cmd/3.1.2.342:$PATH
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.2.67:$PATH
+export PATH=/Users/mario/tools/flow:$PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export ANT_OPTS="-Xms512M -Xmx1024M -XX:MaxPermSize=250M"
 export PATH=$PATH:/Users/mario/tools/play-2.0
@@ -79,3 +80,6 @@ export GOPATH=/Users/mario/go
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/mario/.gvm/bin/gvm-init.sh" ]] && source "/Users/mario/.gvm/bin/gvm-init.sh"
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/mario/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
