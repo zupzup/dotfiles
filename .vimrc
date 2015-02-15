@@ -38,8 +38,12 @@ imap <c-l> debugger;<ESC>:w<CR>
 
 set ft=javascript
 
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
 let g:tern_map_keys=1
+let g:tern_show_argument_hints='no'
 let g:tern_map_prefix="<leader>"
+set completeopt-=preview
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 let g:flow#enable=0
