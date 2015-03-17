@@ -119,7 +119,7 @@ set modelines=3
 " Turn folding off for real, hopefully
 set foldmethod=manual
 set nofoldenable
-let g:syntastic_javascript_checkers = ['jscs','jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map={ 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['html'] }

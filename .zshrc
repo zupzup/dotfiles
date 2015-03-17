@@ -54,8 +54,6 @@ alias sblm='open -a "Sublime Text"'
 alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security'
 export PATH="/usr/local/bin:$PATH"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
 # Customize to your needs...
@@ -71,9 +69,13 @@ export PATH=/Users/mario/bin/Sencha/Cmd/4.0.2.67:$PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export PATH=$PATH:/Users/mario/tools/play-2.0
 export GOPATH=/Users/mario/go
+export NVM_DIR="/Users/mario/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/mario/.gvm/bin/gvm-init.sh" ]] && source "/Users/mario/.gvm/bin/gvm-init.sh"
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/mario/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
