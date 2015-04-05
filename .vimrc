@@ -23,7 +23,7 @@ Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "mxw/vim-jsx"
-Bundle "facebook/vim-flow"
+Bundle "guns/vim-clojure-static"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -46,7 +46,6 @@ let g:tern_map_prefix="<leader>"
 set completeopt-=preview
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
-let g:flow#enable=0
 let g:jsx_ext_required = 0
 
 map <F3> :NERDTreeToggle<CR>
@@ -55,8 +54,6 @@ map <F4> :NERDTreeFind<CR>
 
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set mouse=a
-set ttymouse=xterm2
 set number
 set nocompatible
 " allow unsaved background buffers and remember marks/undo for them

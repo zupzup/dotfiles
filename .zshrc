@@ -67,7 +67,6 @@ export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/3.1.2.342"
 export PATH=/Users/mario/bin/Sencha/Cmd/3.1.2.342:$PATH
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.2.67:$PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=$PATH:/Users/mario/tools/play-2.0
 export GOPATH=/Users/mario/go
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
