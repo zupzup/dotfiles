@@ -134,11 +134,6 @@ augroup vimrcEx
     \ endif
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass 
-
-  " Leave the return key alone when in command line windows, since it's used
-  " to run commands there.
-  autocmd! CmdwinEnter * :unmap <cr>
-  autocmd! CmdwinLeave * :call MapCR()
 augroup END
 " JavaScript stuff
 "
