@@ -24,6 +24,7 @@ Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "mxw/vim-jsx"
 Bundle "guns/vim-clojure-static"
+Bundle "tpope/vim-fireplace"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -210,13 +211,6 @@ map <leader>gt :CtrlP ../app-tests<cr>
 map <leader>gu :CtrlP ../<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
-
-" "silver searcher
-" if executable('ag')
-"     set grepprg=ag\ --nogroup\ --nocolor
-"     let g:ctrlp_user_command = 'ag %s -l --nocolor -g "'
-"     let g:ctrlp_use_caching = 0
-" endif"
 
 """"""""""""""""""""""""""""""""""
 " DISABLE ARROW KEYS 
