@@ -18,11 +18,10 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
-Bundle "fatih/vim-go"
 Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
-Bundle "mxw/vim-jsx"
+" Bundle "mxw/vim-jsx"
 Bundle "guns/vim-clojure-static"
 Bundle "tpope/vim-fireplace"
 
@@ -137,7 +136,19 @@ augroup vimrcEx
   autocmd! BufRead,BufNewFile *.sass setfiletype sass 
 augroup END
 " JavaScript stuff
-"
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre *.clj,*.js :call <SID>StripTrailingWhitespaces()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -207,7 +218,6 @@ map <leader>gc :CtrlP app/scripts/controllers<cr>
 map <leader>gs :Gstatus<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gl :Glog<cr>
-map <leader>gt :CtrlP ../app-tests<cr>
 map <leader>gu :CtrlP ../<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
