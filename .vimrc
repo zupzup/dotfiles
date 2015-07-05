@@ -21,9 +21,7 @@ Bundle "milkypostman/vim-togglelist"
 Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
-" Bundle "mxw/vim-jsx"
 Bundle "guns/vim-clojure-static"
-Bundle "tpope/vim-fireplace"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
