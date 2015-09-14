@@ -43,8 +43,6 @@ function up()
     test $DIR != "/" && echo $DIR/$TARGET
 }
 
-export GRAILS_HOME=/Users/mario/dev/grailsversions/grails-2.2.2
-export PATH=/Users/mario/dev/grailsversions/grails-2.2.2/bin:$PATH
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.0.203:$PATH
 export PATH=/Users/mario/tools/gradle-1.4/bin:$PATH
 

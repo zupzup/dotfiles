@@ -22,6 +22,7 @@ Bundle "bling/vim-airline"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
+Bundle "terryma/vim-multiple-cursors"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
