@@ -34,7 +34,6 @@ endif
 nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
-imap <c-l> debugger;<ESC>:w<CR>
 
 set ft=javascript
 

@@ -50,6 +50,7 @@ export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/4.0.0.203"
 
 alias sblm='open -a "Sublime Text"'
 alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security'
+alias dm='docker-machine'
 export PATH="/usr/local/bin:$PATH"
 
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
