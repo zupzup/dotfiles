@@ -11,6 +11,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -G'
 alias ll='ls -lG'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias vlcwin='/Applications/VLC.app/Contents/MacOS/VLC -I dummy screen:// --screen-fps=25 --quiet --sout "#transcode{vcodec=mp2v,vb=3072}:standard{mux=ts,dst=10.96.250.166:1234,access=udp}"'
+
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
@@ -79,3 +82,9 @@ export DOCKER_TLS_VERIFY=1
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/mario/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/mario/google-cloud-sdk/completion.zsh.inc'

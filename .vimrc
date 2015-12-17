@@ -24,6 +24,7 @@ Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
 Bundle "terryma/vim-multiple-cursors"
 Bundle "tpope/vim-surround"
+Bundle "lambdatoast/elm.vim"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
