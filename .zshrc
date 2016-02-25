@@ -60,7 +60,7 @@ export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
 # Customize to your needs...
 export SCALA_HOME=/Users/mario/scala
-export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/Users/mario/bin/Sencha/Cmd/4.0.0.203:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/scala/bin:/Users/mario/tools/lein:/Users/mario/tools/mongo/bin
+export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/Users/mario/bin/Sencha/Cmd/4.0.0.203:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/scala/bin:/Users/mario/tools/lein:/Users/mario/tools/mongo/bin:/Users/mario/tools/ngrok/
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 alias java7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7) && echo ENV SET TO JAVA 7 $JAVA_HOME'

@@ -19,12 +19,13 @@ Bundle "tomtom/tlib_vim"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
 Bundle "bling/vim-airline"
+Bundle "vim-airline/vim-airline-themes"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
 Bundle "terryma/vim-multiple-cursors"
 Bundle "tpope/vim-surround"
-Bundle "lambdatoast/elm.vim"
+Bundle "pmsorhaindo/syntastic-local-eslint.vim"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
