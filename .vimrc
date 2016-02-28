@@ -16,15 +16,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'marijnh/tern_for_vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
+Bundle "vim-airline/vim-airline"
+Bundle "vim-airline/vim-airline-themes"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
-Bundle "bling/vim-airline"
-Bundle "vim-airline/vim-airline-themes"
 Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
-Bundle "terryma/vim-multiple-cursors"
-Bundle "tpope/vim-surround"
 Bundle "pmsorhaindo/syntastic-local-eslint.vim"
 
 if executable('ag')
@@ -70,6 +68,10 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+" perf stuff
+:set lazyredraw
+:set ttyfast
+:set synmaxcol=200
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 " highlight current line
