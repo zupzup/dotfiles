@@ -37,19 +37,15 @@ imap <F2> <c-o><F2>
 
 set ft=javascript
 
-let g:instant_markdown_slow = 1
-let g:instant_markdown_autostart = 0
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='no'
 let g:tern_map_prefix="<leader>"
 set completeopt-=preview
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
-let g:jsx_ext_required = 0
 
 map <F3> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
-
 
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -238,7 +234,6 @@ imap <C-b> <CR><Esc>O
 
 vmap <C-c> :w !pbcopy<CR><CR> 
 
-nnoremap <leader>T :!karma run<cr>
 nnoremap <leader>w :w<cr>
 
 set encoding=utf-8
