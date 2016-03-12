@@ -5,14 +5,12 @@ CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
-plugins=(git)
+plugins=(gitfast)
 
 source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -G'
 alias ll='ls -lG'
-alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-alias vlcwin='/Applications/VLC.app/Contents/MacOS/VLC -I dummy screen:// --screen-fps=25 --quiet --sout "#transcode{vcodec=mp2v,vb=3072}:standard{mux=ts,dst=10.96.250.166:1234,access=udp}"'
 
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -47,28 +45,19 @@ function up()
 }
 
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.0.203:$PATH
-export PATH=/Users/mario/tools/gradle-1.4/bin:$PATH
 
-export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/4.0.0.203"
-
-alias sblm='open -a "Sublime Text"'
 alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security'
 alias dm='docker-machine'
 export PATH="/usr/local/bin:$PATH"
 
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
-# Customize to your needs...
-export SCALA_HOME=/Users/mario/scala
 export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/Users/mario/bin/Sencha/Cmd/4.0.0.203:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/scala/bin:/Users/mario/tools/lein:/Users/mario/tools/mongo/bin:/Users/mario/tools/ngrok/
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 alias java7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7) && echo ENV SET TO JAVA 7 $JAVA_HOME'
 export LC_CTYPE="en_US.UTF-8"
-export SENCHA_CMD_3_0_0="/Users/mario/bin/Sencha/Cmd/3.1.2.342"
 
-export PATH=/Users/mario/bin/Sencha/Cmd/3.1.2.342:$PATH
-export PATH=/Users/mario/bin/Sencha/Cmd/4.0.2.67:$PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export GOPATH=/Users/mario/go
 export NVM_DIR="/Users/mario/.nvm"
