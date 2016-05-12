@@ -47,7 +47,6 @@ function up()
 export PATH=/Users/mario/bin/Sencha/Cmd/4.0.0.203:$PATH
 
 alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security'
-alias dm='docker-machine'
 export PATH="/usr/local/bin:$PATH"
 
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
@@ -65,9 +64,6 @@ export NVM_DIR="/Users/mario/.nvm"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "/Users/mario/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mario/.sdkman/bin/sdkman-init.sh"
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/mario/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
