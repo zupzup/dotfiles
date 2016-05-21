@@ -232,8 +232,7 @@ map <right> <nop>
 inoremap <Nul> <C-x><C-o>
 imap <C-b> <CR><Esc>O
 
-vmap <C-c> :w !pbcopy<CR><CR> 
-
+vmap <C-c> "+y
 nnoremap <leader>w :w<cr>
 
 set encoding=utf-8
