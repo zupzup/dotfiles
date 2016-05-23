@@ -230,6 +230,7 @@ map <left> <nop>
 map <right> <nop>
 
 inoremap <Nul> <C-x><C-o>
+vnoremap . :normal .<CR>
 imap <C-b> <CR><Esc>O
 
 vmap <C-c> "+y
