@@ -106,7 +106,7 @@ set backspace=indent,eol,start
 " display incomplete commands
 set showcmd
 set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set listchars=tab:⋅\ ,extends:#,trail:⋅,nbsp:⋅
 " Enable highlighting for syntax
 syntax on
 
