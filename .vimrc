@@ -24,6 +24,7 @@ Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
 Bundle "pmsorhaindo/syntastic-local-eslint.vim"
+Bundle "fatih/vim-go"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -46,6 +47,21 @@ let g:airline_theme='wombat'
 
 map <F3> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
+
+" go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>r <Plug>(go-run)
 
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -169,7 +185,6 @@ nnoremap <leader>vv :grep! -Q '<c-r><c-w>'<cr>:cw<cr><cr>
 
 nnoremap <leader>c :nohls<cr>
 
-nmap <leader>r :registers<cr>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <leader>vf :Ag<SPACE>
 
