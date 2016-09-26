@@ -73,3 +73,7 @@ source '/Users/mario/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/mario/google-cloud-sdk/completion.zsh.inc'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export DOCKER_BOOTSTRAP_HOME=/Users/mario/dev/netconomy/docker-bootstrap
