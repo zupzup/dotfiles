@@ -227,12 +227,16 @@ map <leader>e :edit %%
 
 map <leader>n :bn<cr>
 
-map <leader>gv :CtrlP app/views<cr>
-map <leader>gc :CtrlP app/scripts/controllers<cr>
-map <leader>gs :Gstatus<cr>
+map <leader>gc :GoCallees <cr>
+map <leader>gcs :GoCallers <cr>
+map <leader>gcp :GoChannelPeers <cr>
+map <leader>gd :GoDescribe <cr>
+map <leader>gi :GoImplements<cr>
+vmap <leader>gfv :GoFreevars<cr>
+map <leader>gr :GoReferrers<cr>
+map <leader>gwe :GoWhicherrs<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gl :Glog<cr>
-map <leader>gu :CtrlP ../<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
 
