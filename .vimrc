@@ -32,10 +32,6 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
 endif
 
-nmap <F2> :update<CR>
-vmap <F2> <Esc><F2>gv
-imap <F2> <c-o><F2>
-
 set ft=javascript
 
 let g:tern_map_keys=1
@@ -45,8 +41,6 @@ set completeopt-=preview
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 
-map <F3> :NERDTreeToggle<CR>
-map <F4> :NERDTreeFind<CR>
 
 " go
 let g:go_highlight_functions = 1
@@ -239,6 +233,9 @@ map <leader>gb :Gblame<cr>
 map <leader>gl :Glog<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
+map <leader>t :NERDTreeToggle<CR>
+map <leader>T :NERDTreeFind<CR>
+
 
 """"""""""""""""""""""""""""""""""
 " DISABLE ARROW KEYS 
