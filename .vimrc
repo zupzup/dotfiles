@@ -39,6 +39,8 @@ let g:tern_show_argument_hints='no'
 let g:tern_map_prefix="<leader>"
 set completeopt-=preview
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 
 
