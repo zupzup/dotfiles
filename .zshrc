@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -G'
 alias ll='ls -lG'
-alias gows='cd ~/go/src/golang'
+alias gows='cd ~/go/src/github.com/zupzup'
 
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -52,7 +52,7 @@ export PATH="/usr/local/bin:$PATH"
 
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
-export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/Users/mario/bin/Sencha/Cmd/4.0.0.203:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/scala/bin:/Users/mario/tools/lein:/Users/mario/tools/mongo/bin:/Users/mario/tools/ngrok/
+export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/mongo/bin:/Users/mario/tools/ngrok/
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 alias java7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7) && echo ENV SET TO JAVA 7 $JAVA_HOME'
@@ -69,12 +69,6 @@ export NVM_DIR="/Users/mario/.nvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/mario/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/mario/google-cloud-sdk/completion.zsh.inc'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
