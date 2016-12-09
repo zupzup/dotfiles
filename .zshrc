@@ -56,11 +56,13 @@ export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/g
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 alias java7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7) && echo ENV SET TO JAVA 7 $JAVA_HOME'
+alias imgopt='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
+alias orange='/Users/mario/go/bin/orange'
 export LC_CTYPE="en_US.UTF-8"
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export GOPATH=/Users/mario/go
-export GOROOT=/usr/local/Cellar/go/1.7.3/libexec/
+export GOROOT=/usr/local/Cellar/go/1.7.4/libexec/
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

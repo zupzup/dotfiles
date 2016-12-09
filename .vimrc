@@ -228,6 +228,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 
 map <leader>n :bn<cr>
+map <leader>N :bp<cr>
 
 map <leader>gc :GoCallees <cr>
 map <leader>gcs :GoCallers <cr>
