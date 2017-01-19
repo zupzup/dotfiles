@@ -25,6 +25,7 @@ Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
 Bundle "pmsorhaindo/syntastic-local-eslint.vim"
 Bundle "fatih/vim-go"
+Bundle "tomlion/vim-solidity"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -43,6 +44,8 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 
+let NERDTreeIgnore=['node_modules']
+
 
 " go
 let g:go_highlight_functions = 1
@@ -59,6 +62,8 @@ let g:go_highlight_trailing_whitespace_error = 1
 
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:go_list_type = "quickfix"
+
+let g:omni_sql_no_default_maps = 1
 
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>r <Plug>(go-run)
