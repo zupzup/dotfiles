@@ -50,8 +50,6 @@ export PATH=/Users/mario/bin/Sencha/Cmd/4.0.0.203:$PATH
 alias canary='open -a Google\ Chrome\ Canary --args --disable-web-security'
 export PATH="/usr/local/bin:$PATH"
 
-export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
-
 export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/mongo/bin:/Users/mario/tools/ngrok/:/Users/mario/go/bin:/usr/local/opt/go/libexec/bin
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
