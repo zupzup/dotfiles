@@ -25,7 +25,6 @@ Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
 Bundle "pmsorhaindo/syntastic-local-eslint.vim"
 Bundle "fatih/vim-go"
-Bundle "tomlion/vim-solidity"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
