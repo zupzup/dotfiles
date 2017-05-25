@@ -20,11 +20,11 @@ Bundle "vim-airline/vim-airline"
 Bundle "vim-airline/vim-airline-themes"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
-Bundle "Valloric/YouCompleteMe"
 Bundle "tpope/vim-fugitive"
 Bundle "guns/vim-clojure-static"
 Bundle "pmsorhaindo/syntastic-local-eslint.vim"
 Bundle "fatih/vim-go"
+Bundle "Valloric/YouCompleteMe"
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 

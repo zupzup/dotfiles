@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls='ls -G'
 alias ll='ls -lG'
 alias gows='cd ~/go/src/github.com/zupzup'
+alias bbws='cd ~/go/src/bitbucket.org/codefluegel'
 
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -58,9 +59,11 @@ alias imgopt='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
 alias orange='/Users/mario/go/bin/orange'
 export LC_CTYPE="en_US.UTF-8"
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export GOPATH=/Users/mario/go
-export GOROOT=/usr/local/Cellar/go/1.8.1/libexec/
+export GOROOT=/usr/local/Cellar/go/1.8.3/libexec/
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
