@@ -12,7 +12,6 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
-Bundle 'scrooloose/syntastic'
 Bundle 'marijnh/tern_for_vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -21,10 +20,9 @@ Bundle "vim-airline/vim-airline-themes"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
 Bundle "tpope/vim-fugitive"
-Bundle "guns/vim-clojure-static"
-Bundle "pmsorhaindo/syntastic-local-eslint.vim"
 Bundle "fatih/vim-go"
 Bundle "Valloric/YouCompleteMe"
+Plugin 'w0rp/ale'
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -59,8 +57,11 @@ let g:go_highlight_space_tab_error = 1
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_trailing_whitespace_error = 1
 
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:go_list_type = "quickfix"
+
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 let g:omni_sql_no_default_maps = 1
 
@@ -137,10 +138,6 @@ set modelines=3
 " Turn folding off for real, hopefully
 set foldmethod=manual
 set nofoldenable
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_mode_map={ 'mode': 'active',
-            \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['html'] }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
