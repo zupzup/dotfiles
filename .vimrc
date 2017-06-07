@@ -19,7 +19,6 @@ Bundle "vim-airline/vim-airline"
 Bundle "vim-airline/vim-airline-themes"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
-Bundle "tpope/vim-fugitive"
 Bundle "fatih/vim-go"
 Bundle "Valloric/YouCompleteMe"
 Plugin 'w0rp/ale'
@@ -61,6 +60,7 @@ let g:go_list_type = "quickfix"
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'html': [],
 \}
 
 let g:omni_sql_no_default_maps = 1
