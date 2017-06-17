@@ -13,6 +13,7 @@ alias ls='ls -G'
 alias ll='ls -lG'
 alias gows='cd ~/go/src/github.com/zupzup'
 alias bbws='cd ~/go/src/bitbucket.org/codefluegel'
+alias b42ws='cd ~/go/src/git.block42.io/auko'
 
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
