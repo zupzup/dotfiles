@@ -64,7 +64,7 @@ export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export GOPATH=/Users/mario/go
-export GOROOT=/usr/local/Cellar/go/1.8.3/libexec/
+export GOROOT=/usr/local/Cellar/go/1.9/libexec/
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
