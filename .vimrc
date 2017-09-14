@@ -25,9 +25,10 @@ Plugin 'w0rp/ale'
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore=vendor -g ""'
     let g:ctrlp_use_caching = 0
 endif
+set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*
 
 set ft=javascript
 
@@ -40,7 +41,7 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 
-let NERDTreeIgnore=['node_modules']
+let NERDTreeIgnore=['node_modules', 'vendor']
 
 
 " go
@@ -119,7 +120,6 @@ syntax on
 
 filetype plugin indent on
 
-set wildignore+=*.png,*.jpg,*.gif,build/*,node_modules/*,environments/*,touch/*,*.ttf,bower_components/*,app/bower_components/*,app-tests/*,architect/*,*/node_modules/*,*/architect/*,*/app/bower_components/*,*/bower_components/*,*/touch/*,*/environments/*,*/build/*
 
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
