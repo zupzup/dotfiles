@@ -245,6 +245,8 @@ map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>T :NERDTreeFind<CR>
+map <leader>st :set softtabstop=2 <bar> :set shiftwidth=2 <bar> :set tabstop=2<cr>
+map <leader>ts :set softtabstop=4 <bar> :set shiftwidth=4 <bar> :set tabstop=4<cr>
 
 
 """"""""""""""""""""""""""""""""""
