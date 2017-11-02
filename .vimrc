@@ -41,7 +41,7 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 
-let NERDTreeIgnore=['node_modules', 'vendor']
+let NERDTreeIgnore=['node_modules', 'vendor', 'build']
 
 
 " go
@@ -245,8 +245,7 @@ map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>T :NERDTreeFind<CR>
-map <leader>st :set softtabstop=2 <bar> :set shiftwidth=2 <bar> :set tabstop=2<cr>
-map <leader>ts :set softtabstop=4 <bar> :set shiftwidth=4 <bar> :set tabstop=4<cr>
+map <leader>ust :set softtabstop=2 <bar> :set shiftwidth=2 <bar> :set tabstop=2<cr>
 
 
 """"""""""""""""""""""""""""""""""
