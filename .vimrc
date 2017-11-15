@@ -66,9 +66,6 @@ let g:ale_linters = {
 
 let g:omni_sql_no_default_maps = 1
 
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>r <Plug>(go-run)
-
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
@@ -231,16 +228,10 @@ map <leader>e :edit %%
 map <leader>n :bn<cr>
 map <leader>N :bp<cr>
 
-map <leader>gc :GoCallees <cr>
-map <leader>gcs :GoCallers <cr>
-map <leader>gcp :GoChannelPeers <cr>
+map <leader>gcs :GoCallees <cr>
+map <leader>gcr :GoCallers <cr>
 map <leader>gd :GoDescribe <cr>
 map <leader>gi :GoImplements<cr>
-vmap <leader>gfv :GoFreevars<cr>
-map <leader>gr :GoReferrers<cr>
-map <leader>gwe :GoWhicherrs<cr>
-map <leader>gb :Gblame<cr>
-map <leader>gl :Glog<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
 map <leader>t :NERDTreeToggle<CR>
@@ -255,6 +246,7 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+map q <nop>
 
 inoremap <Nul> <C-x><C-o>
 vnoremap . :normal .<CR>
