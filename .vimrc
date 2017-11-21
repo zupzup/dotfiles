@@ -45,17 +45,12 @@ let NERDTreeIgnore=['node_modules', 'vendor', 'build']
 
 
 " go
-let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_interfaces= 1
 let g:go_highlight_fields = 1
-let g:go_highlight_structs= 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_highlight_space_tab_error = 1
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_trailing_whitespace_error = 1
 
 let g:go_list_type = "quickfix"
 
@@ -86,13 +81,13 @@ set hlsearch
 " perf stuff
 :set lazyredraw
 :set ttyfast
-:set synmaxcol=200
+:set synmaxcol=128
 :set re=1
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
-" highlight current line
-" set cursorline
+set nocursorline
 set nocursorcolumn
+set norelativenumber
 set cmdheight=1
 set switchbuf=useopen
 set showtabline=4
@@ -114,6 +109,7 @@ set list
 set listchars=tab:⋅\ ,extends:#,trail:⋅,nbsp:⋅
 " Enable highlighting for syntax
 syntax on
+syntax sync minlines=200
 
 filetype plugin indent on
 
@@ -237,6 +233,10 @@ map <leader>F :CtrlPMRU<cr>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>T :NERDTreeFind<CR>
 map <leader>ust :set softtabstop=2 <bar> :set shiftwidth=2 <bar> :set tabstop=2<cr>
+
+" re-sync syntax
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 
 """"""""""""""""""""""""""""""""""
