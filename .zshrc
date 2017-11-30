@@ -10,6 +10,7 @@ plugins=(gitfast)
 source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -G'
+alias cw='calories -w'
 alias ll='ls -lG'
 alias gows='cd ~/go/src/github.com/zupzup'
 alias bbws='cd ~/go/src/bitbucket.org/codefluegel'
