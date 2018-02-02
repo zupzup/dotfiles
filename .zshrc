@@ -11,11 +11,13 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -G'
 alias cw='calories -w'
+alias ca='calories add'
 alias ll='ls -lG'
 alias gows='cd ~/go/src/github.com/zupzup'
 alias bbws='cd ~/go/src/bitbucket.org/codefluegel'
 alias b42ws='cd ~/go/src/git.block42.io/auko'
 alias tmlr='cd ~/dev/work/timeular'
+alias gotmlr='cd ~/go/src/gitlab.com/timeular'
 
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -66,7 +68,7 @@ export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export GOPATH=/Users/mario/go
-export GOROOT=/usr/local/Cellar/go/1.9.2/libexec/
+export GOROOT=/usr/local/Cellar/go/1.9.3/libexec/
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
