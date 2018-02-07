@@ -41,7 +41,7 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 
-let NERDTreeIgnore=['node_modules', 'vendor', 'build']
+let NERDTreeIgnore=['node_modules', 'vendor']
 
 
 " go
