@@ -30,8 +30,6 @@ if executable('ag')
 endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*
 
-set ft=javascript
-
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='no'
 let g:tern_map_prefix="<leader>"
@@ -42,7 +40,6 @@ let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 
 let NERDTreeIgnore=['node_modules', 'vendor']
-
 
 " go
 let g:go_highlight_methods = 1
