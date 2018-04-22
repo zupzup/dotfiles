@@ -221,6 +221,8 @@ map <leader>e :edit %%
 map <leader>n :bn<cr>
 map <leader>N :bp<cr>
 
+map <leader>mk :!make test<cr>
+
 map <leader>gcs :GoCallees <cr>
 map <leader>gcr :GoCallers <cr>
 map <leader>gd :GoDescribe <cr>
