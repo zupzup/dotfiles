@@ -8,6 +8,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
