@@ -12,7 +12,6 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
-Bundle 'marijnh/tern_for_vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "vim-airline/vim-airline"
@@ -30,9 +29,6 @@ if executable('ag')
 endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*
 
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='no'
-let g:tern_map_prefix="<leader>"
 set completeopt-=preview
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
