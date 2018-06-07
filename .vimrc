@@ -30,10 +30,12 @@ endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*
 
 set completeopt-=preview
+let g:airline_extensions = []
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
+let g:airline_highlighting_cache = 1
 
 "ycm
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
