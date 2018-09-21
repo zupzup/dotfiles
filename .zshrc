@@ -18,6 +18,7 @@ alias bbws='cd ~/go/src/bitbucket.org/codefluegel'
 alias b42ws='cd ~/go/src/git.block42.io/auko'
 alias tmlr='cd ~/dev/work/timeular'
 alias gotmlr='cd ~/go/src/gitlab.com/timeular'
+alias git='LANG=en_US git'
 
 export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -54,7 +55,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
-export GOROOT=/usr/local/Cellar/go/1.10.3/libexec/
+export GOROOT=/usr/local/Cellar/go/1.11/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -39,6 +39,7 @@ let g:airline_highlighting_cache = 1
 
 "ycm
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_path_to_python_interpreter = "/usr/local/bin/python"
 
 let NERDTreeIgnore=['node_modules', 'vendor']
 
@@ -49,7 +50,6 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_auto_sameids = 'gocode'
 
 let g:auto_type_info=0
 let g:go_auto_sameids=0
@@ -136,6 +136,7 @@ set nofoldenable
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType go setlocal omnifunc=
 augroup vimrcEx
   " Clear all autocmds in the group
   autocmd!
