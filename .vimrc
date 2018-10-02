@@ -19,8 +19,14 @@ Bundle "vim-airline/vim-airline-themes"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
 Bundle "fatih/vim-go"
-Bundle "Valloric/YouCompleteMe"
 Plugin 'w0rp/ale'
+Plugin 'rust-lang/rust.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'racer-rust/vim-racer'
+
+let g:rustfmt_autosave = 1
+set hidden
+let g:racer_experimental_completer = 1
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -36,10 +42,6 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_theme='wombat'
 let g:airline_highlighting_cache = 1
-
-"ycm
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_path_to_python_interpreter = "/usr/local/bin/python"
 
 let NERDTreeIgnore=['node_modules', 'vendor']
 

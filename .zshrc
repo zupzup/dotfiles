@@ -55,7 +55,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
-export GOROOT=/usr/local/Cellar/go/1.11/libexec/
+export GOROOT=/usr/local/Cellar/go/1.11.1/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
