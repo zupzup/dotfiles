@@ -14,8 +14,6 @@ alias cw='calories -w'
 alias ca='calories add'
 alias ll='ls -lG'
 alias gows='cd ~/go/src/github.com/zupzup'
-alias bbws='cd ~/go/src/bitbucket.org/codefluegel'
-alias b42ws='cd ~/go/src/git.block42.io/auko'
 alias tmlr='cd ~/dev/work/timeular'
 alias gotmlr='cd ~/go/src/gitlab.com/timeular'
 alias git='LANG=en_US git'
@@ -57,11 +55,9 @@ export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
 export GOROOT=/usr/local/Cellar/go/1.11.1/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+export RUST_SRC_PATH=/Users/mario/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
 export NVM_DIR="/Users/mario/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "/Users/mario/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mario/.sdkman/bin/sdkman-init.sh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

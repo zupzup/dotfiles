@@ -21,24 +21,12 @@ Bundle "milkypostman/vim-togglelist"
 Bundle "fatih/vim-go"
 Plugin 'w0rp/ale'
 Plugin 'rust-lang/rust.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'racer-rust/vim-racer'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'maralla/completor.vim'
 
-if executable('rls')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'rls',
-                \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-                \ 'whitelist': ['rust'],
-                \ })
-endif
-
+let g:completor_racer_binary = '/Users/mario/.cargo/bin/racer'
 let g:rustfmt_autosave = 1
-set hidden
-let g:racer_experimental_completer = 1
+let g:ycm_filetype_blacklist = { 'rust': 1 }
+
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
@@ -56,6 +44,10 @@ let g:airline_theme='wombat'
 let g:airline_highlighting_cache = 1
 
 let NERDTreeIgnore=['node_modules', 'vendor']
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 " go
 let g:go_highlight_methods = 1
@@ -216,21 +208,6 @@ function! OpenSplit()
 endfunction
 " Align selected lines
 vnoremap <leader>ib :!align<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MULTIPURPOSE TAB KEY
-" Indent if we're at the beginning of a line. Else, do completion.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-n>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-o>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
