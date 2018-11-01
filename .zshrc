@@ -18,6 +18,7 @@ alias gows='cd ~/go/src/github.com/zupzup'
 alias tmlr='cd ~/dev/work/timeular'
 alias gotmlr='cd ~/go/src/gitlab.com/timeular'
 alias git='LANG=en_US git'
+alias tma='tmux attach -t'
 
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
