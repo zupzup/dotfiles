@@ -1,12 +1,13 @@
-ZSH=$HOME/.oh-my-zsh
-
+export ZSH="/Users/mario/.oh-my-zsh"
 ZSH_THEME="mz"
+
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
 plugins=(gitfast)
 
+export LANG=en_US.UTF-8
 source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -G'
@@ -18,7 +19,8 @@ alias tmlr='cd ~/dev/work/timeular'
 alias gotmlr='cd ~/go/src/gitlab.com/timeular'
 alias git='LANG=en_US git'
 
-export LSCOLORS="xxGxBxDxCxEgEdxbxgxcxd"
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
 export GREP_OPTIONS="--color"
 
 export HISTSIZE=100000
@@ -65,3 +67,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+DISABLE_AUTO_UPDATE="true"
+
+
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
