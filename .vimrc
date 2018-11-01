@@ -14,34 +14,32 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "vim-airline/vim-airline"
-Bundle "vim-airline/vim-airline-themes"
 Bundle "scrooloose/nerdtree"
 Bundle "milkypostman/vim-togglelist"
+Plugin 'itchyny/lightline.vim'
 Bundle "fatih/vim-go"
 Plugin 'w0rp/ale'
 Plugin 'rust-lang/rust.vim'
 Plugin 'maralla/completor.vim'
 
 let g:completor_racer_binary = '/Users/mario/.cargo/bin/racer'
-let g:rustfmt_autosave = 1
-let g:ycm_filetype_blacklist = { 'rust': 1 }
 
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ }
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ 
     let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore=vendor -g ""'
     let g:ctrlp_use_caching = 0
 endif
-set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*
+set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*,*/target,*/target/*
 
 set completeopt-=preview
-let g:airline_extensions = []
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#tagbar#enabled = 0
-let g:airline_theme='wombat'
-let g:airline_highlighting_cache = 1
 
 let NERDTreeIgnore=['node_modules', 'vendor']
 
@@ -62,10 +60,15 @@ let g:go_auto_sameids=0
 
 let g:go_list_type = "quickfix"
 
+let g:ale_fixers = {'rust': ['rustfmt']}
+let g:ale_fix_on_save = 1
+
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'html': [],
 \}
+
+let g:ale_lint_on_enter = 0
 
 let g:omni_sql_no_default_maps = 1
 

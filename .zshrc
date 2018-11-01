@@ -45,6 +45,7 @@ alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 alias imgopt='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
 alias orange='/Users/mario/go/bin/orange'
+alias clp='cargo clippy --all-targets --all-features -- -D warnings'
 export LC_CTYPE="en_US.UTF-8"
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
