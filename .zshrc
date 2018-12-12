@@ -15,6 +15,7 @@ alias cw='calories -w'
 alias ca='calories add'
 alias ll='ls -lG'
 alias gows='cd ~/go/src/github.com/zupzup'
+alias rst='cd ~/dev/oss/rust/'
 alias tmlr='cd ~/dev/work/timeular'
 alias gotmlr='cd ~/go/src/gitlab.com/timeular'
 alias git='LANG=en_US git'
@@ -57,7 +58,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
-export GOROOT=/usr/local/Cellar/go/1.11.1/libexec/
+export GOROOT=/usr/local/Cellar/go/1.11.2/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 export RUST_SRC_PATH=/Users/mario/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
 export NVM_DIR="/Users/mario/.nvm"
@@ -68,9 +69,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
-
-DISABLE_AUTO_UPDATE="true"
-
-
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
