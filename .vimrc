@@ -21,6 +21,7 @@ Bundle "fatih/vim-go"
 Plugin 'w0rp/ale'
 Plugin 'rust-lang/rust.vim'
 Plugin 'maralla/completor.vim'
+Plugin 'leafgarland/typescript-vim'
 
 let g:completor_racer_binary = '/Users/mario/.cargo/bin/racer'
 
