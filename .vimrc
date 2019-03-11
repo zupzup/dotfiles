@@ -35,9 +35,11 @@ let g:lightline = {
       \ }
 
 if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor\ 
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore=vendor -g ""'
+    set grepprg=rg\ --vimgrep
+    let g:ctrlp_user_command = 'rg --files %s'
     let g:ctrlp_use_caching = 0
+    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_switch_buffer = 'et'
 endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*,*/target,*/target/*
 
@@ -190,8 +192,7 @@ colorscheme nazca
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>y "*y
-nnoremap <leader>vb :grep! "\b<c-r><c-w>\b"<cr>:cw<cr><cr>
-nnoremap <leader>vv :grep! -Q '<c-r><c-w>'<cr>:cw<cr><cr>
+nnoremap <leader>vv :grep! "\b<c-r><c-w>\b"<cr>:cw<cr><cr>
 
 nnoremap <leader>c :nohls<cr>
 
