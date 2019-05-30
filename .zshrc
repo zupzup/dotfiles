@@ -20,6 +20,7 @@ alias tmlr='cd ~/dev/work/timeular'
 alias gotmlr='cd ~/go/src/gitlab.com/timeular'
 alias git='LANG=en_US git'
 alias tma='tmux attach -t'
+alias java11='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home'
 
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
@@ -58,7 +59,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
-export GOROOT=/usr/local/Cellar/go/1.12.4/libexec/
+export GOROOT=/usr/local/Cellar/go/1.12.5/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 export RUST_SRC_PATH=/Users/mario/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
 export NVM_DIR="/Users/mario/.nvm"
