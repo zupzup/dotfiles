@@ -43,6 +43,8 @@ if executable('rg')
 endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*,*/target,*/target/*
 
+let g:completor_node_binary='/Users/mario/.nvm/versions/node/v8.12.0/bin/node'
+
 set completeopt-=preview
 
 let NERDTreeIgnore=['node_modules', 'vendor']
@@ -67,8 +69,12 @@ let g:go_list_type = "quickfix"
 let g:ale_fixers = {'rust': ['rustfmt']}
 let g:ale_fix_on_save = 1
 
+let g:ale_php_phpcs_use_global = 1
+let g:ale_php_phpcs_standard = "WordPress"
+
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'php': ['phpcs'],
 \   'html': [],
 \}
 
@@ -236,6 +242,7 @@ map <leader>F :CtrlPMRU<cr>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>T :NERDTreeFind<CR>
 map <leader>ust :set softtabstop=2 <bar> :set shiftwidth=2 <bar> :set tabstop=2<cr>
+map <leader>et :set expandtab!
 
 " re-sync syntax
 noremap <F12> <Esc>:syntax sync fromstart<CR>

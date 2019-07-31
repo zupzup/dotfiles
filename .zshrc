@@ -22,6 +22,7 @@ alias git='LANG=en_US git'
 alias tma='tmux attach -t'
 alias java8='export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home'
 alias cr='cargo run'
+alias ct='cargo test'
 alias cck='cargo check'
 
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
@@ -47,7 +48,7 @@ export ACK_COLOR_MATCH='red'
 
 export PATH="/usr/local/bin:$PATH"
 
-export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/mongo/bin:/Users/mario/tools/ngrok/:/Users/mario/go/bin:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/Users/mario/.rvm/gems/ruby-2.0.0-p247/bin:/Users/mario/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/mario/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/mario/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mario/tools/bin:/Users/mario/tools/ngrok/:/Users/mario/go/bin:/usr/local/opt/go/libexec/bin
 alias vim='/usr/local/bin/vim'
 alias vi='/usr/local/bin/vim'
 alias imgopt='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
@@ -61,7 +62,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
-export GOROOT=/usr/local/Cellar/go/1.12.6/libexec/
+export GOROOT=/usr/local/Cellar/go/1.12.7/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
 export RUST_SRC_PATH=/Users/mario/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
 export NVM_DIR="/Users/mario/.nvm"
