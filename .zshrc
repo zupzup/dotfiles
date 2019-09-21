@@ -55,6 +55,7 @@ alias imgopt='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'
 alias orange='/Users/mario/go/bin/orange'
 alias clp='cargo clippy --all-targets --all-features -- -D warnings'
 export LC_CTYPE="en_US.UTF-8"
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/Cellar/libffi/3.2.1/lib/pkgconfig
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -62,7 +63,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=/Users/mario/go
 export GRADLE_OPTS=-Xmx1g
-export GOROOT=/usr/local/Cellar/go/1.12.7/libexec/
+export GOROOT=/usr/local/Cellar/go/1.13/libexec/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
 export RUST_SRC_PATH=/Users/mario/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
 export NVM_DIR="/Users/mario/.nvm"

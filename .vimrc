@@ -25,6 +25,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'markonm/traces.vim'
 
 let g:completor_racer_binary = '/Users/mario/.cargo/bin/racer'
+let g:completor_complete_options = 'menuone,noselect'
 
 let g:lightline = {
       \ 'colorscheme': 'powerline',
@@ -42,10 +43,6 @@ if executable('rg')
     let g:ctrlp_switch_buffer = 'et'
 endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*,*/target,*/target/*
-
-let g:completor_node_binary='/Users/mario/.nvm/versions/node/v8.12.0/bin/node'
-
-set completeopt-=preview
 
 let NERDTreeIgnore=['node_modules', 'vendor']
 
@@ -69,12 +66,8 @@ let g:go_list_type = "quickfix"
 let g:ale_fixers = {'rust': ['rustfmt']}
 let g:ale_fix_on_save = 1
 
-let g:ale_php_phpcs_use_global = 1
-let g:ale_php_phpcs_standard = "WordPress"
-
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'php': ['phpcs'],
 \   'html': [],
 \}
 
@@ -233,10 +226,6 @@ map <leader>N :bp<cr>
 
 map <leader>mk :!make test<cr>
 
-map <leader>gcs :GoCallees <cr>
-map <leader>gcr :GoCallers <cr>
-map <leader>gd :GoDescribe <cr>
-map <leader>gi :GoImplements<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
 map <leader>t :NERDTreeToggle<CR>
