@@ -1,31 +1,43 @@
-"autocmd!
-
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-Bundle 'gmarik/vundle'
-Bundle 'https://github.com/kien/ctrlp.vim'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-commentary'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "scrooloose/nerdtree"
-Bundle "milkypostman/vim-togglelist"
-Plugin 'itchyny/lightline.vim'
-Bundle "fatih/vim-go"
-Plugin 'w0rp/ale'
-Plugin 'rust-lang/rust.vim'
-Plugin 'maralla/completor.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'markonm/traces.vim'
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-commentary'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'scrooloose/nerdtree'
+Plug 'milkypostman/vim-togglelist'
+Plug 'itchyny/lightline.vim'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'markonm/traces.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'lervag/vimtex'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'dense-analysis/ale', { 'for': 'kotlin' }
 
-let g:completor_racer_binary = '/Users/mario/.cargo/bin/racer'
-let g:completor_complete_options = 'menuone,noselect'
+call plug#end()
+
+let g:ale_fixers = {'kotlin': ['ktlint']}
+let g:ale_linters = {'kotlin': ['ktlint']}
+let g:ale_fix_on_save = 1
+
+if has('nvim')
+    set guicursor=
+    set inccommand=nosplit
+    noremap <C-q> :confirm qall<CR>
+end
+
+if !has('gui_running')
+  set t_Co=256
+endif
 
 let g:lightline = {
       \ 'colorscheme': 'powerline',
@@ -44,11 +56,36 @@ if executable('rg')
 endif
 set wildignore+=*/vendor,*/vendor/*,*.png,*.jpg,*.gif,build/*,node_modules/*,*.ttf,*/node_modules/*,*/build/*,*/target,*/target/*
 
-let NERDTreeIgnore=['node_modules', 'vendor']
+let NERDTreeIgnore=['node_modules', 'vendor', 'target']
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+inoremap <silent><expr> <TAB>
+\ coc#pum#visible() ? coc#pum#next(1):
+\ <SID>check_back_space() ? "\<Tab>" :
+\ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " go
 let g:go_highlight_methods = 1
@@ -57,23 +94,24 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_code_completion_enabled = 1
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 let g:auto_type_info=0
 let g:go_auto_sameids=0
 
 let g:go_list_type = "quickfix"
 
-let g:ale_fixers = {'rust': ['rustfmt']}
-let g:ale_fix_on_save = 1
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
 
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'html': [],
-\}
-
-let g:ale_lint_on_enter = 0
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
 
 let g:omni_sql_no_default_maps = 1
+
 
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,6 +119,10 @@ set number
 set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
+set nobackup
+set nowritebackup
+set updatetime=300
+set shortmess+=c
 " remember more commands and search history
 set history=10000
 set expandtab
@@ -101,8 +143,8 @@ set hlsearch
 set ignorecase smartcase
 set nocursorline
 set nocursorcolumn
-set norelativenumber
-set cmdheight=1
+set relativenumber
+set cmdheight=2
 set switchbuf=useopen
 set showtabline=4
 set winwidth=79
@@ -143,7 +185,7 @@ set nofoldenable
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType go setlocal omnifunc=
+" autocmd FileType go setlocal omnifunc=
 augroup vimrcEx
   " Clear all autocmds in the group
   autocmd!
@@ -161,6 +203,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set t_Co=256 
 :set background=dark
+:set mmp=5000
 colorscheme nazca
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -206,6 +249,9 @@ map <leader>n :bn<cr>
 map <leader>N :bp<cr>
 
 map <leader>mk :!make test<cr>
+noremap <F3> :set norelativenumber<cr>
+noremap <F4> :set relativenumber<cr>
+noremap <F5> :w !detex \| wc -w<CR>
 
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlPMRU<cr>
@@ -226,13 +272,13 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-map q <nop>
+" map q <nop>
 
 inoremap <Nul> <C-x><C-o>
 vnoremap . :normal .<CR>
 imap <C-b> <CR><Esc>O
 
-vmap <C-c> "+y
+set clipboard=unnamedplus
 nnoremap <leader>w :w<cr>
 
 set encoding=utf-8
